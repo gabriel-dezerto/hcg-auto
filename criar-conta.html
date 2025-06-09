@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta</title>
+  <link rel="stylesheet" href="criar-conta.css">
+    <!-- 1) importa o common.js primeiro -->
+    <script src="common.js"></script>
+    <!-- 2) depois o registro.js -->
+    <script src="criar-conta.js"></script>
+    <link rel="shortcut icon" type="imagex/png" href="../Imagens/Logo HCG.png">
+</head>
+<body>
+  <div class="line"></div>
+  <div class="Main">
+    <div class="form-container">
+      <div class="logo">
+          <a href="index.html"><img src="../Imagens/Logo HCG.png" alt=""></a>
+      </div>
+      <div class="h1Cadastro">
+        <h1 style="color: #ff4ec7;">Crie</h1><h1 style="margin-left: 12px;">sua conta.</h1>
+      </div>
+      <div class="loginDesc">
+        <p>Preencha seus dados</p>
+      </div>
+    
+      <form id="formCadastro">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="nome">CPF:</label>
+        <input type="text" id="cpf" name="cpf" maxlength="14" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <div class="pass-message" id="mensagemSenha">
+          <h1>A senha deve conter:</h1>
+          <ul class="pass-message-ul">
+            <li>Mínimo de 8 caracteresa</li>
+            <li>&#40 Dica &#41 1 Letra Maiuscula</li>
+            <li>&#40 Dica &#41 1 Número</li>
+          </ul>
+        </div>
+        <button type="submit" onclick="verificaSenha(document.getElementById('senha'))">Criar Conta</button>
+      </form>
+      <div class="success-message" id="mensagemCadastro" style="display: none;">
+        Conta criada com sucesso! Redirecionando...
+      </div>
+      <div class="login-link">
+        <a href="login.html">Já tem uma conta? Entrar</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

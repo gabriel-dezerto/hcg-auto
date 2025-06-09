@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honda City</title>
+  <link rel="stylesheet" href="city.css">
+  <script src="../tema-claro-escuro/tema.js"></script>
+  <link rel="shortcut icon" type="imagex/png" href="../Imagens/Logo HCG.png">
+</head>
+<body>
+  <div id="transition-overlay"></div>
+  <div class="line"></div>
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul class="navUl">
+                    <li class="navLi">
+                        <a href="../index/index.html">
+                            <h1>Home</h1>
+                        </a>
+                    </li>
+                    <li class="navLi">
+                        <a href="../carros/carro.html">
+                            <h1>Carros</h1>
+                        </a>
+                    </li>
+                    <li class="navLi">
+                        <a href="../sobre nós/sobre.html">
+                            <h1>Sobre-nós</h1>
+                        </a>
+                    </li>
+                    <li class="navLi">
+                        <a href="../contato/contato.html">
+                            <h1>Contato</h1>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="logoB">
+            <div class="logo">
+                <a href="../index/index.html"><img src="../Imagens/Logo HCG.png" alt=""></a>
+            </div>
+        </div>
+        <div class="tema_select">
+            <select name="" id="selectModo" onchange="pegaID()">
+              <option value="sistema">Sistema</option>
+                <option value="light">Claro</option>
+                <option value="dark">Escuro</option>
+            </select>
+        <div class="userLogo">
+            <a href="../index/login.html"><img src="../Imagens/user-profile-svgrepo-com.svg" alt=""></a>
+        </div>
+        </div>
+    </header>
+
+
+  <div class="container">
+    <div class="car-header">
+      <img src="../imagens_carros/honda_city.png" alt="Honda City" class="car-image">
+      <div class="car-info">
+        <div class="badge"></div>
+        <div style="display: flex;">
+          <h1 style="color: var(--cor); font-family: OpenSauceB;" class="title">Honda<span style="font-size: 16px; color: gray"></span></h1> <h1 style="color: #ff66c4; font-family: OpenSauceB; font-size: 25pt; margin-left: 9px;">City</h1>
+        </div>
+        <div class="details">
+            <p >O Honda Civic é um sedan confiável, econômico e com bom desempenho, ideal para uso diário.</p>
+            <div class="cat">
+              <div class="catItem">
+                <div class="catImg">
+                  <img src="https://www.svgrepo.com/show/533553/car-side.svg" alt="">
+                </div>
+                <div class="catDesc">
+                  <h5>Carroceria</h5>
+                  <p>Sedan</p>
+                </div>
+              </div>
+
+              <div class="catItem">
+                <div class="catImg">
+                  <img src="https://www.svgrepo.com/show/380021/fuel-gas-station.svg" alt="">
+                </div>
+                <div class="catDesc">
+                  <h5>Combustível</h5>
+                  <p>Flex</p>
+                </div>
+              </div>
+
+              <div class="catItem">
+                <div class="catImg">
+                  <img src="https://www.webmotors.com.br/catalogo/assets/img/icon-exchange.svg" alt="">
+                </div>
+                <div class="catDesc">
+                  <h5>Câmbio</h5>
+                  <p>Manual</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="price">
+          <h2 style="color: var(--cor); font-size: 18px; font-family: OpenSauce; margin: 0; padding-top: 30px;">Preço Aluguel</h2>
+          <h1 style="color: var(--cor); font-size: 30px; font-family: OpenSauce;">R$ 129,00</h1>
+      </div>
+      </div>
+    </div>
+    <div class="section price-details">
+      <h3 class="h3_price-details">Detalhamento do preço do carro</h3>
+      <p>Valor do aluguel do carro: <strong>R$ 129,00</strong></p>
+      <p>Preço por 3 dias: <strong>R$ 383,00</strong></p>
+      <p style="font-size: 12px; color: gray">Se você efetuar o pagamento com um cartão emitido no Brasil, sua operadora vai cobrar uma taxa adicional...</p>
+      <button class="toggle-btn" onclick="toggleExtra()" id="extraBtn">Informações adicionais</button>
+      <div id="extraInfo" class="extra-info" style="display: none;">
+        <br>
+        <div style="display: flex;">
+          <h1 style="color: var(--cor); font-size: 30px; font-family: OpenSauce;">Especificações</h1> <h1 style="color: #ff66c4; font-size: 30px; margin-left: 5px; font-family: OpenSauce;">técnicas</h1><h1 style="color: #333333; font-size: 30px; font-family: OpenSauce;">.</h1>
+        </div>
+        <h2 style="color: #ff66c4; font-family: OpenSauce;">Caracteristicas</h2>
+        <p>5 lugares</p>
+        <p>Manual</p>
+        <p>4 mala grande</p>
+        <p>11 mala pequena</p>
+        <p>Quilometragem 123.000 km</p>
+        <h2 style="color: #ff66c4; font-family: OpenSauce;">Registro</h2>
+        <p>Nome da pessoa jurídica: Foco Aluguel de Carros, S.A.</p>
+        <p>Registro comercial: National Register of Legal Entities</p>
+        <p>Número do registro: 017.730.797/0001-21</p>
+        <p>Email: atendimento@aluguefoco.com.br</p>
+      </div>
+    </div>
+
+      <form id="reservaForm">
+        <button type="submit" class="rent-btn">Confirmar Reserva</button>
+      </form>
+      <div id="mensagemSucesso" class="success-message" style="display: none;">Reserva realizada com sucesso!</div>
+</div>  
+
+<script>
+  // Alternar exibição de informações adicionais
+  function toggleExtra() {
+    const info = document.getElementById("extraInfo");
+    const btn = document.getElementById("extraBtn");
+    if (info.style.display === "none") {
+      info.style.display = "block";
+      btn.textContent = "Esconder informações adicionais";
+    } else {
+      info.style.display = "none";
+      btn.textContent = "Informações adicionais";
+    }
+  }
+
+  // Verifica se o usuário está logado com base no localStorage
+  function estaLogado() {
+    return localStorage.getItem("usuarioLogado") === "true" && localStorage.getItem("usuario") !== null;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Exibe o nome do usuário logado (opcional)
+    const usuario = localStorage.getItem("usuario");
+    if (usuario) {
+      const span = document.getElementById("boasVindas");
+      if (span) span.textContent = `Bem-vindo, ${usuario}!`;
+    }
+
+    // Evento de envio do formulário de reserva
+    document.getElementById("reservaForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      if (!estaLogado()) {
+        alert("Você precisa criar uma conta antes de reservar.");
+        window.location.href = "../index/criar-conta.html";
+        return;
+      }
+
+      // Exibe a mensagem de sucesso e limpa o formulário
+      document.getElementById("mensagemSucesso").style.display = "block";
+      this.reset();
+    });
+  });
+</script>
+
+  
+<footer>
+  <div class="footer_div">
+      <div class="footer_lista">
+          <h3><a href="../nissan/nissan.html" class="a_marca">Nissan</a></h3>
+          <ul>
+              <li><a href="../nissan/kicks.html" class="a_carros">Kicks</a></li>
+              <li><a href="../nissan/versa.html" class="a_carros">Versa</a></li>
+              <li><a href="../nissan/frontier.html" class="a_carros">Frontier</a></li>
+          </ul>
+      </div>
+      <div class="footer_lista">
+          <h3><a href="../toyota/toyota.html" class="a_marca">Toyota</a></h3>
+          <ul>
+              <li><a href="../toyota/corolla.html" class="a_carros">Corolla</a></li>
+              <li><a href="../toyota/yaris.html" class="a_carros">Yaris</a></li>
+              <li><a href="../toyota/sw4.html" class="a_carros">SW4</a></li>
+          </ul>
+      </div>
+      <div class="footer_lista">
+          <h3><a href="../mitsubishi/mitsubishi.html" class="a_marca">Mitsubishi</a></h3>
+          <ul>
+              <li><a href="../mitsubishi/Lancer.html" class="a_carros">Lancer</a></li>
+              <li><a href="../mitsubishi/eclipse.html" class="a_carros">Eclipsse Cross</a></li>
+              <li><a href="../mitsubishi/pajero.html" class="a_carros">Pajero</a></li>
+          </ul>
+      </div>
+      <div class="footer_lista">
+          <h3><a href="../honda/honda.html" class="a_marca">Honda</a></h3>
+          <ul>
+              <li><a href="../honda/civic.html" class="a_carros">Civic</a></li>
+              <li><a href="../honda/hr-v.html" class="a_carros">HR-V</a></li>
+              <li><a href="../honda/city.html" class="a_carros">City</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer-container">
+      <div class="footer-section">
+          <h3>HCG - AUTO</h3>
+          <p>Alugue com confiança na líder em carros japoneses: qualidade, segurança e desempenho garantidos.</p>
+          <p><a href="../contato/contato.html" class="a_rua">Rua Boa Vista, 825</a><br>São Caetano do Sul - SP</p>
+      </div>
+      <div class="footer-section">
+          <h3>Siga-nos nas redes sociais</h3>
+          <ul>
+              <li><img src="../Imagens/instagram_logo.svg" height="30" width="30">Instagram: hcgauto_japao</li>
+              <li><img src="../Imagens/twitter_logo.svg" height="30" width="30"> Twitter: hcgauto</li>
+              <li><img src="../Imagens/tiktok_logo.svg" height="30" width="30"> TikTok: hcgauto_japao</li>
+          </ul>
+      </div>
+  </div>
+  <div class="bandeira_japao"><img src="../Imagens/bandeira-do-japao.webp" alt="bandeira-do-japao"></div>
+  <div class="footer-bottom">
+      <br>
+      <p><br>&copy; 2025 HCG. Todos os direitos reservados.</p>
+  </div>
+
+</footer>
+</body>
+</html>

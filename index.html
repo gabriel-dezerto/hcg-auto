@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html modo-light-dark lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCG - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="../Imagens/Logo HCG.png">
+    <script src="slider.js" defer></script>
+    <script src="carros-slider.js" defer></script>
+    <script src="../tema-claro-escuro/tema.js"></script>
+
+    <!--Script do sistema de pesquisas-->
+    <script>
+        function mostrarPesquisa() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const itens = document.querySelectorAll(".resultPes");
+
+            itens.forEach(item => {
+                const texto = item.textContent.toLowerCase();
+                if (texto.includes(input)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="transition-overlay"></div>
+    <div class="line"></div>
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul class="navUl">
+                    <li class="navLi">
+                        <a href="index.html">
+                            <h1>Home</h1>
+                        </a>
+                    </li>
+                    <li class="navLi">
+                        <a href="../carros/carro.html">
+                            <h1>Carros</h1>
+                        </a>
+                    </li>
+                    <li class="navLi">
+                        <a href="../sobre nós/sobre.html">
+                            <h1>Sobre-nós</h1>
+                        </a>
+                    </li>
+                    <li class="navLi">
+                        <a href="../contato/contato.html">
+                            <h1>Contato</h1>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="logoB">
+            <div class="logo">
+                <a href="index.html"><img src="../Imagens/Logo HCG.png" alt=""></a>
+            </div>
+        </div>
+        <div class="tema_select">
+            <select name="" id="selectModo" onchange="pegaID()">
+                <option value="sistema">Sistema</option>
+                <option value="light">Claro</option>
+                <option value="dark">Escuro</option>
+            </select>
+            <div class="userLogo">
+                <a href="login.html"><img src="../Imagens/user-profile-svgrepo-com.svg" alt=""></a>
+            </div>
+        </div>
+
+
+    </header>
+
+    <main>
+        <div class="mainT">
+            <h1>HCG - AUTO</h1>
+        </div>
+        <div class="quotation">
+            <img src="../Imagens/double-quote-serif-left-svgrepo-com.svg" alt="">
+            <h2>Autenticidade em <br> carros Japoneses</h2>
+        </div>
+
+        <section>
+            <div class="divext_slider">
+                <div class="container-slider">
+                    <button id="prev-button"><img style="filter: invert();"
+                            src="../Imagens/arrow-sm-right-svgrepo-com.svg" alt="prev-button"></button>
+                    <div class="container-images">
+                        <img onclick="" id="container-imagesIMG" src="../imagens_carros/Civic-Slider.png"
+                             alt="carro1" class="slider on"> </a>
+                        <img id="container-imagesIMG" src="../imagens_carros/Corolla-Slider.png"
+                            alt="carro2" class="slider on"> </a>
+                        <img id="container-imagesIMG" src="../imagens_carros/Lancer-Slider.png"
+                            alt="carro3" class="slider on"> </a>
+                        <img id="container-imagesIMG" src="../imagens_carros/Kicks-Slider.png"
+                            alt="carro4" class="slider on">
+                    </div>
+                    <button id="next-button"><img style="filter: invert();"
+                            src="../Imagens/arrow-sm-right-svgrepo-com.svg" alt="nesxt-button"></button>
+                </div>
+            </div>
+        </section>
+        
+        <div class="search-container">
+            <div class="searchH1">
+                <img src="../Imagens/search-alt-1-svgrepo-com.svg" alt="">
+                <h1 style="color: #ff66c4;">Pesquise</h1>
+                <h1 style="margin-left: 12px; color: var(--cor);">seu carro aqui.</h1>
+            </div>
+            <form id="form-pesquisa">
+                <input type="text" id="searchInput" class="search-bar" placeholder="Pesquisar Carros...">
+                <button class="search-btn" type="button" onclick="mostrarPesquisa()">Pesquisar</button>
+                <ul id="lista-carros">
+                    <li class="resultPes"><a href="../mitsubishi/Lancer.html">Mitsubishi Lancer</a></li>
+                    <li class="resultPes"><a href="../honda/civic.html">Honda Civic</a></li>
+                    <li class="resultPes"><a href="../mitsubishi/eclipse.html">Mitsubishi Eclipse Croos</a></li>
+                    <li class="resultPes"><a href="../nissan/frontier.html">Nissan Frontier</a></li>
+                    <li class="resultPes"><a href="../toyota/corolla.html">Toyota Corolla</a></li>
+                    <li class="resultPes"><a href="../honda/city.html">Honda City</a></li>
+                    <li class="resultPes"><a href="../nissan/kicks.html">Nissan Kicks</a></li>
+                    <li class="resultPes"><a href="../toyota/sw4.html">Toyota SW4</a></li>
+                    <li class="resultPes"><a href="../honda/hr-v.html">Honda HR-V</a></li>
+                    <li class="resultPes"><a href="../mitsubishi/pajero.html">Mitsubishi Pajero</a></li>
+                    <li class="resultPes"><a href="../nissan/versa.html">Nissan Versa</a></li>
+                    <li class="resultPes"><a href="../toyota/yaris.html">Toyota Yaris</a></li>
+                    <li class="resultPes"><a href="../honda/honda.html">Honda</a></li>
+                    <li class="resultPes"><a href="../toyota/toyota.html">Toyota</a></li>
+                    <li class="resultPes"><a href="../mitsubishi/mitsubishi.html">Mitsubishi</a></li>
+                    <li class="resultPes"><a href="../nissan/nissan.html">Nissan</a></li>
+                </ul>
+            </form>
+        </div>
+        <div class="marcas">
+            <h1>Marcas</h1>
+        </div>
+        <div class="logo_marcas">
+            <ul class="_marcas">
+                <a href="../nissan/nissan.html">
+                    <div class="_marcasBlock1">
+                        <li><img src="../Imagens/nissan_logo.svg"></li>
+                    </div>
+                </a>
+                <a href="../toyota/toyota.html">
+                    <div class="_marcasBlock2">
+                        <li><img src="../Imagens/toyota_logo.svg"></li>
+                    </div>
+                </a>
+                <a href="../mitsubishi/mitsubishi.html">
+                    <div class="_marcasBlock3">
+                        <li><img src="../Imagens/mitsubishi_logo.svg"></li>
+                    </div>
+                </a>
+                <a href="../honda/honda.html">
+                    <div class="_marcasBlock4">
+                        <li><img src="../Imagens/honda_logo.svg"></li>
+                    </div>
+                </a>
+            </ul>
+        </div>
+        <div class="em_alta">
+            <div class="div_em_alta">
+                <h1>Em Alta</h1>
+            </div>
+        </div>
+
+        <div class="emAltaBlock">
+            <div class="emAltaMain">
+                <div class="emAltaCont">
+                    <div class="emAltaH1">
+                        <h1>Mais alugado</h1>
+                    </div>
+                    <div class="emAltaImg">
+                        <a href="../honda/civic.html"><img src="../imagens_carros/civic_AI.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="emAltaCont">
+                    <div class="emAltaH1">
+                        <h1>Mais acessado</h1>
+                    </div>
+                    <div class="emAltaImg">
+                        <a href="../mitsubishi/Lancer.html"><img src="../imagens_carros/lancer_AI.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="emAltaCont">
+                    <div class="emAltaH1">
+                        <h1>Mais barato</h1>
+                    </div>
+                    <div class="emAltaImg">
+                        <a href="../toyota/yaris.html"><img src="../imagens_carros/yaris_AI.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="marqueeBrand">
+            <div class="marqueeTrack">
+                <div class="marqueeGroup">
+                    <img src="../Imagens/nissan_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/toyota_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/mitsubishi_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/honda_logo.svg" />
+                </div>
+                <div class="marqueeGroup">
+                    <img src="../Imagens/nissan_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/toyota_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/mitsubishi_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/honda_logo.svg" />
+                </div>
+                <div class="marqueeGroup">
+                    <img src="../Imagens/nissan_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/toyota_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/mitsubishi_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/honda_logo.svg" />
+                </div>
+                <div class="marqueeGroup">
+                    <img src="../Imagens/nissan_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/toyota_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/mitsubishi_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/honda_logo.svg" />
+                </div>
+                <div class="marqueeGroup">
+                    <img src="../Imagens/nissan_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/toyota_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/mitsubishi_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/honda_logo.svg" />
+                </div>
+                <div class="marqueeGroup">
+                    <img src="../Imagens/nissan_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/toyota_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/mitsubishi_logo.svg" />
+                    <img style="filter: invert();" src="../Imagens/honda_logo.svg" />
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer_div">
+            <div class="footer_lista">
+                <h3><a href="../nissan/nissan.html" class="a_marca">Nissan</a></h3>
+                <ul>
+                    <li><a href="../nissan/kicks.html" class="a_carros">Kicks</a></li>
+                    <li><a href="../nissan/versa.html" class="a_carros">Versa</a></li>
+                    <li><a href="../nissan/frontier.html" class="a_carros">Frontier</a></li>
+                </ul>
+            </div>
+            <div class="footer_lista">
+                <h3><a href="../toyota/toyota.html" class="a_marca">Toyota</a></h3>
+                <ul>
+                    <li><a href="../toyota/corolla.html" class="a_carros">Corolla</a></li>
+                    <li><a href="../toyota/yaris.html" class="a_carros">Yaris</a></li>
+                    <li><a href="../toyota/sw4.html" class="a_carros">SW4</a></li>
+                </ul>
+            </div>
+            <div class="footer_lista">
+                <h3><a href="../mitsubishi/mitsubishi.html" class="a_marca">Mitsubishi</a></h3>
+                <ul>
+                    <li><a href="../mitsubishi/Lancer.html" class="a_carros">Lancer</a></li>
+                    <li><a href="../mitsubishi/eclipse.html" class="a_carros">Eclipsse Cross</a></li>
+                    <li><a href="../mitsubishi/pajero.html" class="a_carros">Pajero</a></li>
+                </ul>
+            </div>
+            <div class="footer_lista">
+                <h3><a href="../honda/honda.html" class="a_marca">Honda</a></h3>
+                <ul>
+                    <li><a href="../honda/civic.html" class="a_carros">Civic</a></li>
+                    <li><a href="../honda/hr-v.html" class="a_carros">HR-V</a></li>
+                    <li><a href="../honda/city.html" class="a_carros">City</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>HCG - AUTO</h3>
+                <p>Alugue com confiança na líder em carros japoneses: qualidade, segurança e desempenho garantidos.</p>
+                <p><a href="../contato/contato.html" class="a_rua">Rua Boa Vista, 825</a><br>São Caetano do Sul - SP</p>
+            </div>
+            <div class="footer-section">
+                <h3>Siga-nos nas redes sociais</h3>
+                <ul>
+                    <li><img src="../Imagens/instagram_logo.svg" height="30" width="30">Instagram: hcgauto_japao</li>
+                    <li><img src="../Imagens/twitter_logo.svg" height="30" width="30"> Twitter: hcgauto</li>
+                    <li><img src="../Imagens/tiktok_logo.svg" height="30" width="30"> TikTok: hcgauto_japao</li>
+                </ul>
+            </div>
+        </div>
+            <div class="bandeira_japao"><img src="../Imagens/bandeira-do-japao.webp" alt="bandeira-do-japao"></div>
+        <div class="footer-bottom">
+            <br>
+            <p><br>&copy; 2025 HCG. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contato.css">
+    <title>Contato | Auto Rosa Motors</title>
+    <script src="../tema-claro-escuro/tema.js"></script>
+    <link rel="shortcut icon" type="imagex/png" href="../Imagens/Logo HCG.png">
+</head>
+
+<body>
+    <div id="transition-overlay"></div>
+    <div class="line"></div>
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul class="navUl">
+                    <li class="navLi">
+                        <a href="../index/index.html">
+                            <h1>Home</h1>
+                        </a>
+                    </li>
+                    <li class="navLi">
+                        <a href="../carros/carro.html">
+                            <h1>Carros</h1>
+                        </a>
+                    </li>
+                    <li class="navLi">
+                        <a href="../sobre nós/sobre.html">
+                            <h1>Sobre-nós</h1>
+                        </a>
+                    </li>
+                    <li class="navLi">
+                        <a href="../contato/contato.html">
+                            <h1>Contato</h1>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="logoB">
+            <div class="logo">
+                <a href="../index/index.html"><img src="../Imagens/Logo HCG.png" alt=""></a>
+            </div>
+        </div>
+        <div class="tema_select">
+            <select name="" id="selectModo" onchange="pegaID()">
+                <option value="sistema">Sistema</option>
+                <option value="light">Claro</option>
+                <option value="dark">Escuro</option>
+            </select>
+            <div class="userLogo">
+                <a href="../index/login.html"><img src="../Imagens/user-profile-svgrepo-com.svg" alt=""></a>
+            </div>
+    </header>
+
+    <main>
+        <div class="forms-mapa">
+            <div class="aboutUsTitle">
+                <h1>ENTRE EM CONTATO ___</h1>
+            </div>
+            <div class="form-wrapper">
+                <h1>Entre em Contato</h1>
+                <form id="formContato">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required />
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required />
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="4"
+                        required></textarea>
+                    <button type="submit">Enviar Mensagem</button>
+                    <p class="success" id="sucesso">Mensagem enviada com sucesso!</p>
+                </form>
+            </div>
+            <div>
+                <div class="aboutUsMap">
+                    <h1>Onde Estamos:</h1>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8653098296263!2d-46.56120982378588!3d-23.64499416467184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4328c992748f%3A0xcea3c3e698444297!2sSENAI%20S%C3%A3o%20Caetano%20do%20Sul!5e0!3m2!1spt-BR!2sbr!4v1748544229923!5m2!1spt-BR!2sbr"
+                    width="1000" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_div">
+            <div class="footer_lista">
+                <h3><a href="../nissan/nissan.html" class="a_marca">Nissan</a></h3>
+                <ul>
+                    <li><a href="../nissan/kicks.html" class="a_carros">Kicks</a></li>
+                    <li><a href="../nissan/versa.html" class="a_carros">Versa</a></li>
+                    <li><a href="../nissan/frontier.html" class="a_carros">Frontier</a></li>
+                </ul>
+            </div>
+            <div class="footer_lista">
+                <h3><a href="../toyota/toyota.html" class="a_marca">Toyota</a></h3>
+                <ul>
+                    <li><a href="../toyota/corolla.html" class="a_carros">Corolla</a></li>
+                    <li><a href="../toyota/yaris.html" class="a_carros">Yaris</a></li>
+                    <li><a href="../toyota/sw4.html" class="a_carros">SW4</a></li>
+                </ul>
+            </div>
+            <div class="footer_lista">
+                <h3><a href="../mitsubishi/mitsubishi.html" class="a_marca">Mitsubishi</a></h3>
+                <ul>
+                    <li><a href="../mitsubishi/Lancer.html" class="a_carros">Lancer</a></li>
+                    <li><a href="../mitsubishi/eclipse.html" class="a_carros">Eclipsse Cross</a></li>
+                    <li><a href="../mitsubishi/pajero.html" class="a_carros">Pajero</a></li>
+                </ul>
+            </div>
+            <div class="footer_lista">
+                <h3><a href="../honda/honda.html" class="a_marca">Honda</a></h3>
+                <ul>
+                    <li><a href="../honda/civic.html" class="a_carros">Civic</a></li>
+                    <li><a href="../honda/hr-v.html" class="a_carros">HR-V</a></li>
+                    <li><a href="../honda/city.html" class="a_carros">City</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>HCG - AUTO</h3>
+                <p>Alugue com confiança na líder em carros japoneses: qualidade, segurança e desempenho garantidos.</p>
+                <p><a href="../contato/contato.html" class="a_rua">Rua Boa Vista, 825</a><br>São Caetano do Sul - SP</p>
+            </div>
+            <div class="footer-section">
+                <h3>Siga-nos nas redes sociais</h3>
+                <ul>
+                    <li><img src="../Imagens/instagram_logo.svg" height="30" width="30">Instagram: hcgauto_japao</li>
+                    <li><img src="../Imagens/twitter_logo.svg" height="30" width="30"> Twitter: hcgauto</li>
+                    <li><img src="../Imagens/tiktok_logo.svg" height="30" width="30"> TikTok: hcgauto_japao</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bandeira_japao"><a href="../index/index.html"><img src="../Imagens/bandeira-do-japao.webp" alt="bandeira-do-japao"></a></div>
+        <div class="footer-bottom">
+            <br>
+            <p><br>&copy; 2025 HCG. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+
+    <script>
+        const form = document.getElementById('formContato');
+        const sucesso = document.getElementById('sucesso');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            form.reset();
+            sucesso.style.display = 'block';
+            setTimeout(() => {
+                sucesso.style.display = 'none';
+            }, 3000);
+        });
+    </script>
+
+</body>
+
+</html>

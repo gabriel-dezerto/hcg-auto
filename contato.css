@@ -1,0 +1,478 @@
+/* Tema Escuro*/
+
+:root{
+    --cor: rgb(0, 0, 0); /*Define que o valor padrão da variável "--cor"*/
+}
+
+@media (prefers-color-scheme:dark) {
+    :root{
+        --cor: rgb(0, 0, 0); /*Transforma o valor da variável*/
+    }
+    html{
+        color-scheme: dark;
+    }
+}
+/*Define as configurações do tema claro*/
+[modo-light-dark="light"] { 
+    color-scheme: light;
+    --cor: rgba(0, 0, 0, 0.87);
+}
+/*Define as configurações do tema escuro*/
+[modo-light-dark="dark"] {
+    color-scheme: dark;
+    --cor: rgba(0, 0, 0, 0.87);
+}
+
+/*-----------------------------*/
+
+/* Fontes*/
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+@font-face {
+    font-family: "OpenSauce";
+    src: url('../Fonts/OpenSauceSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "OpenSauceB";
+    src: url('../Fonts/OpenSauceSans-Bold.ttf') format('truetype');
+}
+
+/*-----------------------------*/
+
+body{
+    margin: 0;
+      color: var(--cor);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor);
+}
+
+header{
+    display: flex;
+    width: auto;
+    height: 100px;
+
+    background-color: #060506;
+    color: var(--cor);
+    
+    align-items: center;
+}
+
+.tema_select{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+
+    column-gap: 20px;
+}
+
+select{
+    height: 50px;
+    width: 140px;
+    border-radius: 30px;
+    background-color: #ff66c4;
+    color: white;
+    font-family: "OpenSauce";
+    font-size: 12pt;
+    padding: 10px;
+
+    margin-left: auto;
+}
+
+.navUl{
+    margin: 0;
+    display: flex;
+
+    column-gap: 65px;
+
+    list-style: none;
+
+    margin-left: 20px;
+    padding-left: 40px;
+
+}
+
+ul{
+    margin: 0;
+    
+    list-style: none;
+
+    margin-left: 20px;
+}
+
+/* Animação links navBar */
+
+.navLi h1{
+    font-family: 'OpenSauce';
+    font-size: 13pt;
+
+    position: relative;       /* necessário para o ::after */
+    display: inline-block;
+}
+
+.navLi h1:hover{
+    transform: translateY(0px);
+
+}
+
+.navLi h1:after{
+    content: '';
+    left: 0;
+    bottom: -2px;
+    position: absolute;
+
+    width: 98%;
+    height: 2px;
+    background: #ff66c4;
+    transform-origin: center;
+
+    margin: auto;
+
+    transform: scaleX(0);
+    transition: transform 0.2s ease-out;
+    
+}
+
+.navLi h1:hover::after{
+    transform: scaleX(1);
+    transition: transform 0.2s ease-out;
+}
+
+/*-------------------------- */
+
+.aboutUsTitle{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.aboutUsTitle h1{
+    color: #ff66c4;
+    font-size: 46pt;
+
+    font-family: "Roboto";
+
+    letter-spacing: -1px;
+}
+
+.aboutUsTitle h2{
+    color: #131313;
+    width: 60%;
+
+    font-family: "Roboto";
+    font-size: 18pt;
+}
+
+
+.aboutUsMap{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.aboutUsMap h1{
+    color: #252525;
+    font-size: 30pt;
+
+    font-family: "Roboto";
+
+    letter-spacing: -1px;
+}
+
+h1{
+    margin: 0;
+    color: rgb(255, 255, 255);
+
+    font-family: "OpenSauce";
+    font-size: 13pt;
+}
+
+
+.navbar{
+    display: flex;
+    width: 33.3%;
+
+    align-items: center;
+    justify-content: start;
+}
+
+.line{
+    width: 100%;
+    height: 4px;
+
+    background-color: #ff66c4;
+}
+
+.logoB{
+    display: flex;
+    width: 33.3%;
+
+    justify-content: center;
+}
+
+.logo{
+    width: auto;
+    padding: 15px;
+}
+
+.logo img{
+    width: 70px;
+    margin-left: auto;
+}
+
+.userLogo{
+    display: flex;
+
+    justify-content: end;
+
+    margin-right: 20px;
+}
+
+.userLogo img{
+    width: 45px;
+
+    filter: invert();
+}
+
+.forms-mapa{
+    display: flex;
+    justify-content: center;
+    color: var(--cor);
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #000;
+    color: white;
+    padding: 40px 20px 0 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.footer-section {
+    margin-left: 130px;
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+}
+
+.footer-section p,
+.footer-section ul li {
+    font-size: 15px;
+    color: #bdc3c7;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.footer-section .a_rua{
+    color: #bdc3c7;;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #ecf0f1;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+}
+
+.footer_div {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    margin-left: 130px;
+}
+.footer_lista {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: 100px;
+    justify-content: center;
+    font-size: 15pt;
+}
+.footer_lista .a_marca{
+    color: #ffffff;
+}
+.footer_lista ul{
+    margin-left: 0;
+    padding-left: 0;
+}
+.footer_lista li{
+    padding: 0;
+}
+.footer_lista a {
+    color: #bdc3c7;
+}
+.div_footer_img{
+    display: flex;
+}
+.bandeira_japao{
+    display: flex;
+    justify-content: center;
+}
+.bandeira_japao img{
+    height: 75px;
+    width: 110px;
+}
+
+/*----------------------------- */
+
+
+
+:root {
+      --rosa: #ff66c4;
+      --preto: #111111;
+      --cinza-claro: #f5f5f5;
+      --branco: #ffffff;
+    }
+
+    * {
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .form-wrapper {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--cinza-claro);
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      border-top: 4px solid var(--rosa);
+      margin-bottom: 40px;
+    }
+
+    .form-wrapper h1 {
+      text-align: center;
+      color: var(--rosa);
+      margin-bottom: 2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ffffff;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #ffffff;
+    }
+
+    button {
+      width: 100%;
+      background-color: var(--rosa);
+      color: var(--branco);
+      font-weight: bold;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e055b2;
+    }
+
+    .success {
+      display: none;
+      margin-top: 1rem;
+      text-align: center;
+      color: #4caf50;
+    }
