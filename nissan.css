@@ -1,0 +1,486 @@
+/* Tema Escuro*/
+
+:root{
+    --cor: rgb(0, 0, 0); /*Define que o valor padrão da variável "--cor"*/
+    --verde: green; 
+}
+
+@media (prefers-color-scheme:dark) {
+    :root{
+        --cor: rgb(255, 255, 255); /*Transforma o valor da variável*/
+        --verde: rgb(0, 231, 0);
+    }
+    html{
+        color-scheme: dark;
+    }
+}
+/*Define as configurações do tema claro*/
+[modo-light-dark="light"] { 
+    color-scheme: light;
+    --cor: rgba(0,0,0, 0.87);
+    --verde: green;
+}
+/*Define as configurações do tema escuro*/
+[modo-light-dark="dark"] {
+    color-scheme: dark;
+    --cor: rgba(255, 255, 255, 0.87);
+    --verde: rgb(0, 231, 0);
+}
+
+/* Fontes*/
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+@font-face {
+    font-family: "OpenSauce";
+    src: url('../Fonts/OpenSauceSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "OpenSauceB";
+    src: url('../Fonts/OpenSauceSans-Bold.ttf') format('truetype');
+}
+
+/*-----------------------------*/
+
+
+
+a{
+    text-decoration: none;
+    color: var(--cor);
+}
+
+body{
+    margin: 0;
+    color: var(--cor);
+}
+
+
+
+.bandeira_japao{
+    display: flex;
+    justify-content: center;
+}
+.bandeira_japao img{
+    height: 75px;
+    width: 110px;
+}
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap:  82px;
+    padding: 40px;
+  }
+  .car-card {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  .car-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+  }
+
+    .car-card img:hover {
+    transform: scale(1.07);
+  }
+
+
+  .car-card h3 {
+    margin: 10px 0 5px;
+    font-family: "OpenSauceB";
+  }
+
+h1{
+    margin: 0;
+    color: white;
+
+    font-family: "OpenSauce";
+    font-size: 13pt;
+}
+
+header{
+    display: flex;
+    width: auto;
+    height: 100px;
+
+    background-color: #060506;
+    color: var(--cor);
+    
+    align-items: center;
+}
+
+.navUl{
+    margin: 0;
+    display: flex;
+
+    column-gap: 65px;
+
+    list-style: none;
+
+    margin-left: 20px;
+    align-items: center;
+}
+
+ul{
+    margin: 0;
+
+    list-style: none;
+
+    margin-left: 20px;
+}
+
+/* Animação links navBar */
+
+.navLi h1{
+    font-family: 'OpenSauce';
+    font-size: 13pt;
+
+    position: relative;       /* necessário para o ::after */
+    display: inline-block;
+}
+
+.navLi h1:hover{
+    transform: translateY(0px);
+
+}
+
+.navLi h1:after{
+    content: '';
+    left: 0;
+    bottom: -2px;
+    position: absolute;
+
+    width: 98%;
+    height: 2px;
+    background: #ff66c4;
+    transform-origin: center;
+
+    margin: auto;
+
+    transform: scaleX(0);
+    transition: transform 0.2s ease-out;
+    
+}
+
+.navLi h1:hover::after{
+    transform: scaleX(1);
+    transition: transform 0.2s ease-out;
+}
+
+/*-------------------------- */
+
+
+.tema_select{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+
+    column-gap: 20px;
+}
+
+select{
+    height: 50px;
+    width: 140px;
+    border-radius: 30px;
+    background-color: #ff66c4;
+    color: white;
+    font-size: 12pt;
+    font-family: "OpenSauce";
+    padding: 10px;
+
+    margin-left: auto;
+}
+
+.navbar{
+    display: flex;
+    width: 33.3%;
+
+    align-items: center;
+    justify-content: start;
+}
+
+.label {
+    background-color: #ffffff;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+.line{
+    width: 100%;
+    height: 4px;
+
+    background-color: #ff66c4;
+}
+
+.logoB{
+    display: flex;
+    width: 33.3%;
+
+    justify-content: center;
+}
+
+.logo{
+    width: auto;
+    padding: 15px;
+}
+
+.logo img{
+    width: 70px;
+    margin-left: auto;
+}
+
+.userLogo{
+    display: flex;
+
+    justify-content: end;
+
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+.userLogo img{
+    width: 45px;
+
+    filter: invert();
+}
+
+.features {
+    text-align: justify;
+    font-size: 13px;
+    font-family: "OpenSauce";
+    color: #555;
+
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .options{
+    display: flex;
+
+    column-gap: 25px;
+  }
+
+  .comprar{
+    display: flex;
+
+    width: 150px;
+    color: white;
+    font-family: "OpenSauce";
+    padding: 12px;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: #ff66c4 2px solid;
+
+    transition: background-color 0.3s;
+
+    background-color: #ff66c41e;
+    color: #ff66c4;
+  }
+
+  .comprar:hover{
+    border: #ff66c4 2px solid;
+    background-color: rgb(255, 102, 196);
+    color: #ecf0f1;
+  }
+
+/* Footer */
+
+footer {
+    background-color: #000;
+    color: white;
+    padding: 40px 20px 0 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.footer-section {
+    margin-left: 130px;
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+}
+
+.footer-section p,
+.footer-section ul li {
+    font-size: 15px;
+    color: #bdc3c7;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.footer-section .a_rua{
+    color: #bdc3c7;;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #ecf0f1;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+}
+
+.footer_div {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    margin-left: 130px;
+}
+.footer_lista {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: 100px;
+    justify-content: center;
+    font-size: 15pt;
+}
+.footer_lista .a_marca{
+    color: #ffffff;
+}
+.footer_lista ul{
+    margin-left: 0;
+    padding-left: 0;
+}
+.footer_lista li{
+    padding: 0;
+}
+.footer_lista a {
+    color: #bdc3c7;
+}
+.div_footer_img{
+    display: flex;
+}
+.bandeira_japao{
+    display: flex;
+    justify-content: center;
+}
+.bandeira_japao img{
+    height: 75px;
+    width: 110px;
+}
+
+/*----------------------------- */
+
+.valor{
+    color: green;
+    font-family: "OpenSauce";
+    padding: 12px;
+    font-size: 17px;
+    display: inline-block;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+
+    border: rgba(47, 255, 99, 0.233) 2px solid;
+}
+
+.carroImg img{
+    width: 300px;
+    height: 200px;
+
+    object-fit: contain;
+    color: #6d6d6d0c;
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.car-card a.card-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+
+.label {
+      display: inline-block;
+      padding: 5px 10px;
+      font-size: 14px;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-bottom: 8px;
+    }
+
+.label.escolha-favorita { 
+    background-color: #ff4d4d;
+    font-family: "OpenSauceB";
+}
+.label.barato             { 
+    background-color: #4cda6d; 
+    font-family: "OpenSauceB";
+}
+.label.alugado         { 
+    background-color: #ff7272; 
+    font-family: "OpenSauceB";
+}
+.label.acessado             { 
+    background-color: #7857c5; 
+    font-family: "OpenSauceB";
+}

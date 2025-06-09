@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota</title>
+    <link rel="stylesheet" href="toyota.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../tema-claro-escuro/tema.js"></script>
+    <link rel="shortcut icon" type="imagex/png" href="../Imagens/Logo HCG.png">
+</head>
+<body>
+    <div class="line"></div>
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul class="navUl">
+                    <li class="navLi">
+                        <a href="../index/index.html">
+                            <h1>Home</h1>
+                        </a>
+                    </li>
+                    <li class="navLi">
+                        <a href="../carros/carro.html">
+                            <h1>Carros</h1>
+                        </a>
+                    </li>
+                    <li class="navLi">
+                        <a href="../sobre nós/sobre.html">
+                            <h1>Sobre-nós</h1>
+                        </a>
+                    </li>
+                    <li class="navLi">
+                        <a href="../contato/contato.html">
+                            <h1>Contato</h1>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="logoB">
+            <div class="logo">
+                <a href="../index/index.html"><img src="../Imagens/Logo HCG.png" alt=""></a>
+            </div>
+        </div>
+        <div class="tema_select">
+            <select name="" id="selectModo" onchange="pegaID()">
+                <option value="sistema">Sistema</option>
+                <option value="light">Claro</option>
+                <option value="dark">Escuro</option>
+            </select>
+        <div class="userLogo">
+            <a href="../index/login.html"><img src="../Imagens/user-profile-svgrepo-com.svg" alt=""></a>
+        </div>
+        </div>
+    </header>
+
+    <div id="carGrid" class="car-grid"></div>
+    <script>
+        function getLabelClass(rotulo) {
+      const texto = rotulo.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (texto.includes("escolha")) return "escolha-favorita";
+      if (texto.includes("acessado")) return "mais acessado";
+      if (texto.includes("barato") || texto.includes("Barato")) return "mais barato";
+      if (texto.includes("alugado")) return "mais alugado";
+      return "";
+    }
+
+
+        const cars = [
+
+            {
+                nome: 'Corolla',
+                marca: "Toyota",
+                imagem: '../imagens_carros/toyota_corolla.png',
+                lugares: '5',
+                cambio: 'Manual',
+                malaGrande: '4',
+                malaPequena: '10',
+                quilometragem: '72.300 km',
+                rotulo: '.',
+                preco: 'R$149,00',
+                link: 'corolla.html'
+            },
+
+            {
+                nome: 'SW4',
+                marca: "Toyota",
+                imagem: '../imagens_carros/toyota_sw4.png',
+                lugares: '7',
+                cambio: 'Automática',
+                malaGrande: '2',
+                malaPequena: '4',
+                quilometragem: '73.000 km',
+                rotulo: '.',
+                preco: 'R$299,00',
+                link: 'sw4.html'
+                
+            },
+
+            {
+                nome: 'Yaris',
+                marca: "Toyota",
+                imagem: '../imagens_carros/toyota_yaris.png',
+                lugares: '5',
+                cambio: 'Manual',
+                malaGrande: '4',
+                malaPequena: '10',
+                quilometragem: '74.300 km',
+                rotulo: 'Mais barato',
+                preco: 'R$119,00',
+                link: 'yaris.html'
+            },
+        ];
+
+        const carGrid = document.getElementById('carGrid');
+
+        cars.forEach(carro => {
+      const card = document.createElement('div');
+      card.className = 'car-card';
+
+      const rotuloClasse = getLabelClass(carro.rotulo);
+      const rotuloHTML = carro.rotulo
+        ? `<div class="label ${rotuloClasse}">${carro.rotulo}</div>`
+        : '';
+
+        card.innerHTML = `
+        ${rotuloHTML}
+        <a href="${carro.link}">
+          <div class="carroImg">
+            <img src="${carro.imagem}" alt="${carro.nome}" />
+          </div>
+        </a>
+        <div style="display: flex;">
+            <h3 style="text-align: start; font-size: 17pt; color: black; font-family: 'OpenSauceB'; background-color: #6d6d6d0c; border-radius: 10px; padding: 5px; ">${carro.marca}</h3>
+            <h3 style="text-align: start; font-size: 17pt; color: #ff66c4; font-family: 'OpenSauceB'; background-color: #6d6d6d0c; border-radius: 10px; padding: 5px; ">${carro.nome}</h3>
+        </div>
+        <p class="features">
+          ${carro.lugares} lugares<br>
+          ${carro.cambio}<br>
+          ${carro.malaGrande} malas grandes<br>
+          ${carro.malaPequena} malas pequenas<br>
+          Quilometragem: ${carro.quilometragem}
+        </p>
+        <div class="valor">Valor: ${carro.preco}</div>
+        <a href="${carro.link}">
+          <div class="comprar">Alugar</div>
+        </a>
+      `;
+
+      carGrid.appendChild(card);
+});
+    </script>
+        
+        <footer>
+            <div class="footer_div">
+                <div class="footer_lista">
+                    <h3><a href="../nissan/nissan.html" class="a_marca">Nissan</a></h3>
+                    <ul>
+                        <li><a href="../nissan/kicks.html" class="a_carros">Kicks</a></li>
+                        <li><a href="../nissan/versa.html" class="a_carros">Versa</a></li>
+                        <li><a href="../nissan/frontier.html" class="a_carros">Frontier</a></li>
+                    </ul>
+                </div>
+                <div class="footer_lista">
+                    <h3><a href="../toyota/toyota.html" class="a_marca">Toyota</a></h3>
+                    <ul>
+                        <li><a href="../toyota/corolla.html" class="a_carros">Corolla</a></li>
+                        <li><a href="../toyota/yaris.html" class="a_carros">Yaris</a></li>
+                        <li><a href="../toyota/sw4.html" class="a_carros">SW4</a></li>
+                    </ul>
+                </div>
+                <div class="footer_lista">
+                    <h3><a href="../mitsubishi/mitsubishi.html" class="a_marca">Mitsubishi</a></h3>
+                    <ul>
+                        <li><a href="../mitsubishi/Lancer.html" class="a_carros">Lancer</a></li>
+                        <li><a href="../mitsubishi/eclipse.html" class="a_carros">Eclipsse Cross</a></li>
+                        <li><a href="../mitsubishi/pajero.html" class="a_carros">Pajero</a></li>
+                    </ul>
+                </div>
+                <div class="footer_lista">
+                    <h3><a href="../honda/honda.html" class="a_marca">Honda</a></h3>
+                    <ul>
+                        <li><a href="../honda/civic.html" class="a_carros">Civic</a></li>
+                        <li><a href="../honda/hr-v.html" class="a_carros">HR-V</a></li>
+                        <li><a href="../honda/city.html" class="a_carros">City</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>HCG - AUTO</h3>
+                    <p>Alugue com confiança na líder em carros japoneses: qualidade, segurança e desempenho garantidos.</p>
+                    <p><a href="../contato/contato.html" class="a_rua">Rua Boa Vista, 825</a><br>São Caetano do Sul - SP</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Siga-nos nas redes sociais</h3>
+                    <ul>
+                        <li><img src="../Imagens/instagram_logo.svg" height="30" width="30">Instagram: hcgauto_japao</li>
+                        <li><img src="../Imagens/twitter_logo.svg" height="30" width="30"> Twitter: hcgauto</li>
+                        <li><img src="../Imagens/tiktok_logo.svg" height="30" width="30"> TikTok: hcgauto_japao</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bandeira_japao"><img src="../Imagens/bandeira-do-japao.webp" alt="bandeira-do-japao"></div>
+            <div class="footer-bottom">
+                <br>
+                <p><br>&copy; 2025 HCG. Todos os direitos reservados.</p>
+            </div>
+    
+        </footer>
+</body>
+</html>

@@ -1,0 +1,466 @@
+/* Fontes */
+
+@font-face {
+    font-family: "OpenSauce";
+    src: url('../Fonts/OpenSauceSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "OpenSauceB";
+    src: url('../Fonts/OpenSauceSans-Bold.ttf') format('truetype');
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+/* ----------------- */
+
+/* Header */
+
+body, html{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+header{
+    display: flex;
+    width: auto;
+    height: 250px;
+
+    background-color: none;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.navUl{
+    margin: 0;
+    display: flex;
+
+    column-gap: 65px;
+
+    list-style: none;
+
+    margin-left: 20px;
+
+    padding: 0;
+}
+
+
+ul{
+    margin: 0;
+    
+    list-style: none;
+
+    margin-left: 20px;
+}
+
+/* Animação links navBar */
+
+.navLi h1{
+    font-family: 'OpenSauce';
+    font-size: 13pt;
+
+    position: relative;       /* necessário para o ::after */
+    display: inline-block;
+}
+
+.navLi h1:hover{
+    transform: translateY(0px);
+
+}
+
+.navLi h1:after{
+    content: '';
+    left: 0;
+    bottom: -2px;
+    position: absolute;
+
+    width: 98%;
+    height: 2px;
+    background: #ff66c4;
+    transform-origin: center;
+
+    margin: auto;
+
+    transform: scaleX(0);
+    transition: transform 0.2s ease-out;
+    
+}
+
+.navLi h1:hover::after{
+    transform: scaleX(1);
+    transition: transform 0.2s ease-out;
+}
+
+/*-------------------------- */
+
+h1{
+    margin: 0;
+    color: white;
+
+    font-family: "OpenSauce";
+    font-size: 13pt;
+}
+
+nav{
+}
+
+.navbar{
+    display: flex;
+    width: 33.3%;
+
+    align-items: center;
+    justify-content: start;
+}
+
+.line{
+    width: 100%;
+    height: 4px;
+
+    background-color: #ff66c4;
+}
+
+.logoB{
+    display: flex;
+    width: 33.3%;
+
+    justify-content: center;
+}
+
+.logo{
+    width: auto;
+    padding: 15px;
+}
+
+.logo img{
+    width: 70px;
+    margin-left: auto;
+}
+
+.userLogo{
+    width: 33.3%;
+    display: flex;
+
+    justify-content: end;
+
+    margin-right: 20px;
+}
+
+.userLogo img{
+    width: 45px;
+
+    filter: invert();
+}
+/* ------------------------- */
+
+/* Main */
+
+.loginSection{
+    display: flex;
+    width: auto;
+    height: 700px;
+}
+
+.loginMain1{
+    width: 50%;
+    height: 100%;
+
+}
+
+.loginMain2{
+    width: 50%;
+    height: 100%;
+
+}
+
+.loginMainH1{
+    display: flex;
+    width: 100%;
+    height: 40%;
+
+    justify-content: end;
+    align-items: center;
+}
+
+.loginMainH1 h1{
+    color: #000000;
+    font-family: "OpenSauceB";
+
+    font-size: 70pt;
+    margin-right: 80px;
+}
+
+.loginContent{
+    display: flex;
+    width: 70%;
+    height: 100%;
+}
+
+.login{
+    margin: auto;
+    width: 80%;
+    height: 90%;
+
+}
+
+.loginH1{
+    display: flex;
+    height: 50px;
+}
+
+.loginH1 h1{
+    font-family: "OpenSauce";
+    font-size: 30pt;
+    font-weight: bold;
+
+    color: #000000;
+}
+
+.loginDesc p{
+    margin: 0;
+    font-family: "OpenSauceB";
+    font-size: 19pt;
+    font-weight: bold;
+
+    color: #999fa2;
+
+    line-height: 26px;
+}
+
+.hr{
+    display: flex;
+    width: 1000px;
+    height: 50px;
+
+    align-items: center;
+}
+
+.MainHrs{
+    width: 100%;
+    height: 100px;
+
+    margin-top: 60px;
+}
+
+.MainHr{
+    width: 1100px;
+    height: 3px;
+    background-color: #ff66c4;
+
+    border-radius: 50px;
+}
+
+.MainHrBack1{
+    width: 80%;
+    height: 4px;
+    background-color: #ff66c4;
+
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.MainHrBack2{
+    width: 85%;
+    height: 4px;
+    background-color: #ff66c4;
+
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.MainHrBack3{
+    width: 90%;
+    height: 4px;
+    background-color: #ff66c4;
+
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.loginIn h1{
+    color: #000000;
+    font-family: "OpenSauceB";
+
+    font-size: 12pt;
+    margin: 5px;
+    
+}
+
+.loginIn input{
+    width: 50%;
+    height: 1px;
+
+    border-radius: 10px;
+    border: #000000 solid 2px;
+
+    padding: 20px;
+    
+}
+
+.LoginBtn{
+    display: flex;
+    flex-direction: column;
+}
+
+.LoginBtn button{
+    width: 51.5%;
+    height: 45px;
+
+    border-radius: 10px;
+
+    border: none;
+    background-color: #ff66c4;
+
+    color: white;
+    font-family: "OpenSauce";
+    font-size: 13pt;
+
+    cursor: pointer;
+
+    margin-top: 22px;
+    margin-bottom: 8px;
+}
+
+.LoginBtn a{
+    color: #ff66c4;
+    font-size: 11pt;
+    font-family: "OpenSauce";
+
+    margin-left: 7px;
+}
+
+.LoginTerms{
+    width: 230px;
+    text-align: justify;
+
+    font-size: 9pt;
+    font-family: "OpenSauceB";
+    color: #999fa2;
+
+    margin-left: 7%;
+    margin-top: 30px;
+}
+
+.LoginTerms a{
+    text-decoration: underline;
+    color: #999fa2;
+}
+
+.LoginTerms a:hover{
+    text-decoration: underline;
+    color: #ff66c4;
+}
+
+/* ----------------- */
+
+/* footer */
+
+footer {
+    background-color: #000;
+    color: white;
+    padding: 40px 20px 0 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin-left: 130px;
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+}
+
+.footer-section p,
+.footer-section ul li {
+    font-size: 15px;
+    color: #bdc3c7;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.footer-section .a_rua{
+    color: #bdc3c7;;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #ecf0f1;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+}
+
+.footer_div {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    margin-left: 130px;
+}
+.footer_lista {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: 100px;
+    justify-content: center;
+    font-size: 15pt;
+}
+.footer_lista ul{
+    margin-left: 0;
+    padding-left: 0;
+}
+.footer_lista li{
+    padding: 0;
+}
+.footer_lista a {
+    color: #bdc3c7;
+}
+.div_footer_img{
+    display: flex;
+}
