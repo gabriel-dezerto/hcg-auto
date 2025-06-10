@@ -3,12 +3,14 @@
 :root{
     --cor: rgb(0, 0, 0); /*Define que o valor padrão da variável "--cor"*/
     --verde: green; 
+    --ponto: white;
 }
 
 @media (prefers-color-scheme:dark) {
     :root{
         --cor: rgb(255, 255, 255); /*Transforma o valor da variável*/
         --verde: rgb(0, 231, 0);
+        --ponto: rgba(0, 0, 0);
     }
     html{
         color-scheme: dark;
@@ -19,12 +21,14 @@
     color-scheme: light;
     --cor: rgba(0,0,0, 0.87);
     --verde: green;
+    --ponto: rgb(255,255,255);
 }
 /*Define as configurações do tema escuro*/
 [modo-light-dark="dark"] {
     color-scheme: dark;
     --cor: rgba(255, 255, 255, 0.87);
     --verde: rgb(0, 231, 0);
+    --ponto: rgba(0, 0, 0);
 }
 
 /* Fontes*/
@@ -210,8 +214,8 @@ select{
 }
 
 .label {
-    background-color: #ffffff;
-    color: white;
+    background-color: #ffffff00;
+    color: var(--ponto);
     padding: 4px 8px;
     font-size: 12px;
     display: inline-block;
@@ -262,7 +266,7 @@ select{
     text-align: justify;
     font-size: 13px;
     font-family: "OpenSauce";
-    color: #555;
+    color: var(--cor);
 
     padding-top: 10px;
     padding-bottom: 20px;
@@ -420,8 +424,10 @@ footer {
 }
 
 /*----------------------------- */
+
+
 .valor{
-    color: green;
+    color: var(--verde);
     font-family: "OpenSauce";
     padding: 12px;
     font-size: 17px;
@@ -461,7 +467,7 @@ footer {
       display: inline-block;
       padding: 5px 10px;
       font-size: 14px;
-      color: white;
+      color: var(--ponto);
       font-weight: bold;
       border-radius: 5px;
       margin-bottom: 8px;
@@ -472,14 +478,17 @@ footer {
     font-family: "OpenSauceB";
 }
 .label.barato             { 
+    color: white;
     background-color: #4cda6d; 
     font-family: "OpenSauceB";
 }
 .label.alugado         { 
+    color: white;
     background-color: #ff7272; 
     font-family: "OpenSauceB";
 }
 .label.acessado             { 
+    color: white;
     background-color: #7857c5; 
     font-family: "OpenSauceB";
 }

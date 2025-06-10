@@ -478,14 +478,17 @@ footer {
     font-family: "OpenSauceB";
 }
 .label.barato             { 
+    color: white;
     background-color: #4cda6d; 
     font-family: "OpenSauceB";
 }
 .label.alugado         { 
+    color: white;
     background-color: #ff7272; 
     font-family: "OpenSauceB";
 }
 .label.acessado             { 
+    color: white;
     background-color: #7857c5; 
     font-family: "OpenSauceB";
 }
