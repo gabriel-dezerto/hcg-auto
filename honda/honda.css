@@ -210,8 +210,8 @@ select{
 }
 
 .label {
-    background-color: #ffffff;
-    color: white;
+    background-color: #ffffff00;
+    color: var(--ponto);
     padding: 4px 8px;
     font-size: 12px;
     display: inline-block;
@@ -423,7 +423,7 @@ footer {
 
 
 .valor{
-    color: green;
+    color: var(--verde);
     font-family: "OpenSauce";
     padding: 12px;
     font-size: 17px;
