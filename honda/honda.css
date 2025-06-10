@@ -10,7 +10,7 @@
     :root{
         --cor: rgb(255, 255, 255); /*Transforma o valor da variável*/
         --verde: rgb(0, 231, 0);
-        --ponto: rgba(0, 0, 0, 0);
+        --ponto: rgba(0, 0, 0);
     }
     html{
         color-scheme: dark;
@@ -21,14 +21,14 @@
     color-scheme: light;
     --cor: rgba(0,0,0, 0.87);
     --verde: green;
-    --ponto: white;
+    --ponto: rgb(255,255,255);
 }
 /*Define as configurações do tema escuro*/
 [modo-light-dark="dark"] {
     color-scheme: dark;
     --cor: rgba(255, 255, 255, 0.87);
     --verde: rgb(0, 231, 0);
-    --ponto: rgba(0, 0, 0, 0);
+    --ponto: rgba(0, 0, 0);
 }
 
 /* Fontes*/
@@ -467,7 +467,7 @@ footer {
       display: inline-block;
       padding: 5px 10px;
       font-size: 14px;
-      color: white;
+      color: var(--ponto);
       font-weight: bold;
       border-radius: 5px;
       margin-bottom: 8px;
