@@ -10,7 +10,7 @@
     :root{
         --cor: rgb(255, 255, 255); /*Transforma o valor da variável*/
         --verde: rgb(0, 231, 0);
-        --ponto: black;
+        --ponto: rgba(0, 0, 0, 0);
     }
     html{
         color-scheme: dark;
@@ -28,7 +28,7 @@
     color-scheme: dark;
     --cor: rgba(255, 255, 255, 0.87);
     --verde: rgb(0, 231, 0);
-    --ponto: black;
+    --ponto: rgba(0, 0, 0, 0);
 }
 
 /* Fontes*/
