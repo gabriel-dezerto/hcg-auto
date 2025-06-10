@@ -262,7 +262,7 @@ select{
     text-align: justify;
     font-size: 13px;
     font-family: "OpenSauce";
-    color: #555;
+    color: var(--cor);
 
     padding-top: 10px;
     padding-bottom: 20px;
