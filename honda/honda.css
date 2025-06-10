@@ -3,12 +3,14 @@
 :root{
     --cor: rgb(0, 0, 0); /*Define que o valor padrão da variável "--cor"*/
     --verde: green; 
+    --ponto: white;
 }
 
 @media (prefers-color-scheme:dark) {
     :root{
         --cor: rgb(255, 255, 255); /*Transforma o valor da variável*/
         --verde: rgb(0, 231, 0);
+        --ponto: black;
     }
     html{
         color-scheme: dark;
@@ -19,12 +21,14 @@
     color-scheme: light;
     --cor: rgba(0,0,0, 0.87);
     --verde: green;
+    --ponto: white;
 }
 /*Define as configurações do tema escuro*/
 [modo-light-dark="dark"] {
     color-scheme: dark;
     --cor: rgba(255, 255, 255, 0.87);
     --verde: rgb(0, 231, 0);
+    --ponto: black;
 }
 
 /* Fontes*/
